@@ -14,5 +14,6 @@ class Option(models.Model):
     poll_id = models.IntegerField()
     title = models.CharField(max_length=200)
     count = models.IntegerField(default=0)
+
     def __str__(self):
-        return str(self.poll_id) + ": " + self.title
+        return str(self.id) + ' :'  + str(self.poll_id)+ ') ' + self.title

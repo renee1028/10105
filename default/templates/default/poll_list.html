@@ -9,7 +9,7 @@
     {{ poll.date_created }}
     <a href="{{ poll.id }}/">{{ poll.subject }}</a> |
     <a href="{{ poll.id }}/update/">修改</a> |
-    <a href="{{ poll.id }}/delete/">刪除</a>
+    <a href="{% url 'poll_delete' poll.id %}">刪除</a>
   </li>
   {% endfor %}
 </ul>
